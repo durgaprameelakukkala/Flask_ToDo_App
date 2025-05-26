@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Edit Task{% endblock %}
+{% block content %}
+<form method="POST" action="{{ url_for('edit', task_id=task_id) }}">
+  <div class="mb-3">
+    <label for="taskContent" class="form-label">Task Content</label>
+    <input 
+      type="text" 
+      id="taskContent" 
+      name="content" 
+      class="form-control" 
+      value="{{ content }}" 
+      required 
+      autocomplete="off" 
+    />
+  </div>
+  <button type="submit" class="btn btn-primary w-100">Update Task</button>
+  <p class="mt-3 text-center">
+    <a href="{{ url_for('index') }}">Back to To-Do List</a>
+  </p>
+</form>
+{% endblock %}

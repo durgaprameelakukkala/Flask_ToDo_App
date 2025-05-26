@@ -1,0 +1,73 @@
+/* General body styling */
+body {
+  background-color: #f4f6f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+h2 {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Task input form */
+form input[type="text"] {
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s;
+}
+
+form input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Task list items */
+.list-group-item {
+  border-radius: 10px;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.list-group-item:hover {
+  background-color: #f0f4f8;
+  transform: translateY(-1px);
+}
+
+/* Completed tasks */
+.text-decoration-line-through {
+  color: #6c757d !important;
+  font-style: italic;
+}
+
+/* Button groups spacing */
+.btn-group .btn {
+  margin-left: 4px;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .d-flex {
+    flex-direction: column;
+  }
+
+  .d-flex input[type="text"] {
+    margin-bottom: 0.5rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

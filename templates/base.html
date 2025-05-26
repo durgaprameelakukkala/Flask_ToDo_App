@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% block title %}Flask Multi-User Task Manager{% endblock %}</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      background: url('{{ url_for("static", filename="background.jpg") }}') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .side-image {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      max-height: 60%;
+      z-index: 0;
+      opacity: 0.7;
+    }
+
+    .side-image.left {
+      left: 10px;
+    }
+
+    .side-image.right {
+      right: 10px;
+    }
+
+    .center-container {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+      backdrop-filter: blur(5px);
+    }
+
+    .form-box {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Side Images -->
+  <img src="{{ url_for('static', filename='left-image.png') }}" class="side-image left" alt="Left Image">
+  <img src="{{ url_for('static', filename='right-image.png') }}" class="side-image right" alt="Right Image">
+
+  <div class="center-container">
+    <div class="form-box w-100" style="max-width: 400px;">
+      <div class="text-center mb-4">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="App Logo" style="height: 50px;" />
+        <h2 class="mt-2">To-Do List</h2>
+      </div>
+      {% block content %}{% endblock %}
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
