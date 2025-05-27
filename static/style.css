@@ -4,6 +4,17 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Card/container styling for forms and task sections */
+.card-container {
+  max-width: 600px;      /* adjust this to your desired max width */
+  width: 90%;            /* responsive width */
+  margin: 2rem auto;     /* center horizontally with vertical spacing */
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
 /* Header */
 h2 {
   font-weight: 600;
@@ -69,5 +80,10 @@ form input[type="text"]:focus {
 
   .btn {
     width: 100%;
+  }
+
+  .card-container {
+    width: 95%;
+    padding: 1.5rem;
   }
 }
