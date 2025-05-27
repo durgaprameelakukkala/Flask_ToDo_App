@@ -78,6 +78,7 @@ Only logged-in users can access or modify their tasks
 ###License
 This project is licensed under the MIT License.
 ----
-Contributing
-Feel free to fork this repo, submit pull requests, or open issues to help improve it.
+## 🙋‍♀️ Author
+**Durgaprameela Kukkala**  
+[GitHub Profile](https://github.com/durgaprameelakukkala)
 
