@@ -49,6 +49,12 @@ def init_db():
         ''')
 
 @app.route('/')
+def landing():
+    if current_user.is_authenticated:
+        return redirect(url_for('index'))
+    return render_template('landing.html')
+
+@app.route('/index')
 @login_required
 def index():
     with sqlite3.connect(DATABASE) as conn:
